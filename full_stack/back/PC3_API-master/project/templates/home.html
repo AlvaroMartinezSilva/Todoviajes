@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Python button script
+        </title>
+    </head>
+<body>
+<button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+    {% if data%}
+    {{data | safe}}
+    {%  endif %}
+    <br><br>
+
+<form action="/external/" method="post" name="param">
+
+text:
+<input type="text" name="param" required><br><br>
+<br><br>
+<input type="submit" value="Execute external script">
+</form>
+
+</body>
+</html>

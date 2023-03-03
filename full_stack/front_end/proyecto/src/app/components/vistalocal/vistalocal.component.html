@@ -1,0 +1,47 @@
+<div class="centrar1">
+    <div class="flex-containerV">
+        <div class="centrar2 caja2">
+            <h1>{{datos.nombre}}</h1>
+        </div>
+        <div class="centrar2 caja2">
+            <img src="{{datos.foto}}" alt='imagen local'>
+        </div>
+        <h2>INFORMACIÓN ADICIONAL DEL LUGAR</h2>
+
+
+        <div class="itemInfo">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">Número de contacto</th>
+                    <td pattern="/[0-9]/gm">
+                      <tr *ngFor="let item of infocont; index as i">
+                        {{item}}
+                      </tr>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">URL</th>
+                    <td >{{datos.nombre}}: {{datos.direccion}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Odio</th>
+                    <td colspan="2">{{datos.idMunicipio_id}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+<!--
+        <div class="caja3">
+            <p class="textoPrincipal">Datos de contacto: {{datos.contacto}}</p>
+            <p class="subTitulo">URL de {{datos.nombre}}: {{datos.direccion}}</p>
+        </div>
+        <div class="caja3">
+            <p></p>
+            <div class="puntuacion">Puntuacion de odio en {{datos.nombre}}: {{datos.idMunicipio_id}}</div>
+        </div>
+-->
+    </div>
+</div>

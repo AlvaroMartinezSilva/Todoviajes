@@ -1,0 +1,82 @@
+@import '_colores.scss';
+
+
+  ul {
+    margin: 0; 
+    padding-left: 0vh;
+    background: $secundario;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;    
+    border-color:  $terciario;
+    border-style: solid;
+    border-width: 3px;
+    font-family: $fuente, cursive;
+    border-radius: 1.5vh; 
+    display: inline-block;
+    margin-left: 10vh;    
+    list-style-type: none;
+
+}
+  
+li a {
+    display: block;
+    color: $acento;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+li a.active {
+    background-color: $secundario;
+    color: $terciario;
+    border-radius: 1.5vh;   
+}
+  
+li a:hover:not(.active) {
+    background-color: $fugaz;
+    color: $principal;
+    border-radius: 1vh; 
+}
+.grid{
+    display: grid;
+    border-radius: 1.5vh; 
+}
+.item1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+    margin-top: 30vh;
+}
+.item2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+    margin-top: 20vh;
+    margin-left: 7vh;
+}
+button[type="submit"] {
+    height: 6vh;
+    width: 30vh;
+    background: $terciario;
+    color: $secundario;
+    font-size: 24px;
+    border-radius: 20px;
+    border-color: $secundario;
+    margin-bottom: 10vh;
+    font-family: $fuente;
+  }
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    background: $fugaz;
+    color: $secundario;
+  }
+  table {   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;        width: 480px; text-align: center;    border-collapse: collapse;  border: 2px solid $secundario;}
+
+th {     font-size: 13px;     font-weight: normal;     padding: 8px;     border: 2px solid $secundario; background: linear-gradient(to top , $terciario 0%, $acento 60%);
+    ; color: $secundario; }
+
+td {   
+    cursor: pointer;   padding: 2vh;     background: $principal;    text-align: center;
+    color: $secundario;    border: 2px solid $secundario;}
+caption{
+    color: $secundario;
+}
+tr:hover td { background: rgb(249, 175, 91);font-weight: bold; color: $principal;}

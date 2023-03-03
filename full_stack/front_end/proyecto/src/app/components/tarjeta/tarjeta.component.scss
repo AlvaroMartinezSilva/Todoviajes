@@ -1,0 +1,52 @@
+@import '_colores';
+
+.my-card{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $principal;
+    //background-clip:padding-box;
+    border: 2px solid rgba($color: #000125, $alpha: 1.0);
+    border-radius: 5vh;
+}
+.my-card-body{
+    flex: 1 1 auto;
+    padding: 5% 5%;
+}
+.my-card-title{
+    margin-bottom: 5%;
+    font-size: 125%;
+    font-weight: none;
+    line-height: none;
+}
+.card{
+    border: 2px solid rgba($color: #000125, $alpha: 1.0);
+    border-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3vh;
+}
+.btn{
+
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: $terciario;
+    color: $secundario;
+    border-radius: 20px;
+    border-color: $secundario;
+
+}
+
+.btn:hover{
+    
+    cursor: pointer;
+    background: $fugaz;
+    color: $secundario;
+}

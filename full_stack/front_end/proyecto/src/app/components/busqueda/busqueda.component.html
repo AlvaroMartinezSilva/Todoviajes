@@ -1,0 +1,48 @@
+<div class="container">
+        <div class="text">
+            <h1>To Do Viajes, tu web de confianza</h1>
+        </div>
+        <div class="flex-containerV">
+                <div class="busqueda">
+                    <ng-autocomplete
+                    [data]="data"
+                    [searchKeyword]="keyword"
+                    placeholder="Introduce un destino de España"
+                    [itemTemplate]="itemTemplate"
+                    [notFoundTemplate]="notFoundTemplate"
+                    (selected)='redirigirConMunicipio($event)'>
+                    </ng-autocomplete>
+                    <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.nombre"></a>
+                    </ng-template>
+
+                    <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                    </ng-template>
+                </div>
+                <table>
+                    <caption>Información sobre la cantidad de odio de su búsqueda</caption>
+                    <tbody>
+                      <tr>
+                        <th>Media de odio</th>
+                        <th>Noticias de odio</th>
+                        <th>Comentarios de odio</th>
+                      </tr>
+                      <tr>
+                        <td><div class="odio" ><p>{{odio1}}</p></div></td>
+                        <td><div class="odio" ><p>{{odio2}}</p></div></td>
+                        <td><div class="odio" ><p>{{odio3}}</p></div></td>
+                      </tr>
+                      <tr>
+                      </tr>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+        <div class="centrar2">
+            <div class="flex-containerH1">
+                <app-tarjeta [indiceLocalidad]="item.id" [imagen]="item.foto" [nombre]="item.nombre" *ngFor="let item of busqueda; index as i" class="caja2" style="min-width: 30%;"></app-tarjeta>
+            </div>
+        </div>
+    </div>
+</div>

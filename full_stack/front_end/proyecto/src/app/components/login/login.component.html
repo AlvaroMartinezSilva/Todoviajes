@@ -1,0 +1,16 @@
+<div class='container'>
+
+  <div class="login-box" [ngClass]="{'error':errorMessage}">
+    <img src="assets/avatar.png" class="avatar" alt="Avatar Image">
+
+    <label for="username">Nombre administrador</label>
+    <input type="text" placeholder="Introduzca el nombre" [(ngModel)]="usuario" [ngClass]="{'error':errorMessage}">
+    
+    <label for="password">Contraseña</label>
+    <input type="password" placeholder="Introduzca la contraseña" [(ngModel)]="contrasenia" [ngClass]="{'error':errorMessage}">
+
+    <label class="login-error" *ngIf="errorMessage">Login incorrecto</label>
+    
+    <input type="submit" value="Login" (click)="logIn()">
+  </div>
+</div>

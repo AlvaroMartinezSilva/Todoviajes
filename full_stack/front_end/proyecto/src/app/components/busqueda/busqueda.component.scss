@@ -1,0 +1,120 @@
+@import '_colores';
+
+
+// input[type="submit"] {
+//     margin-top: 5vh;
+//     height: 35px;
+//     width: 100px;
+//     background: linear-gradient(to top , $terciario 0%, $acento 60%);
+//     color: $secundario;
+//     font-size: 18px;
+//     border-radius: 20vh;
+//     border-color: $seleccion;
+//   }
+
+// input[type="submit"]:hover {
+//     cursor: pointer;
+//     background: $fugaz;
+//     color: $secundario;
+//     border-color: $secundario;
+//   }
+
+.text{
+    h1{
+        padding-top: 25vh;
+        padding-bottom: 5vh;
+        color: $secundario;
+        font-size: 15vh;
+        text-align: center;
+        font-family: $fuente, cursive;
+    }
+    p{
+      color: $secundario;
+      font-size: 18px;
+      text-align: center;
+      line-height: 5vh;
+      padding-top: 5vh;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vh;
+  }
+// .centrar1{
+//     background-color: aquamarine;
+//     // margin: 5% 10% 5% 10%;//1top,2derecha,3booton,4izquierda
+//     //min-width: 380px;
+
+    .centrar2{
+        background-color: transparent;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    //     .centrar3{
+    //         background-color: rosybrown;
+    //         height: 100%;
+    //     }
+    // }
+// // }
+// .bloque1{
+//     width: 90%;
+// }
+.flex-containerH1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.flex-containerH{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    width: 40vh;
+}
+.flex-containerV{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.caja2{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-width: 30%;
+    min-width: 200px;
+}
+
+.boton{
+    width: 100%;
+    height: 100%;
+}
+.odio{
+    width: auto;
+}
+.busqueda{
+    margin-left: auto;
+    margin-right: auto; 
+    width: 70vh;
+    border-radius: 20px;
+}
+table {  
+    margin-left: auto;
+    margin-right: auto;   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;    margin-top: 10vh;     width: 480px; text-align: center;    border-collapse: collapse;  border: 2px solid $secundario;}
+
+th {     font-size: 13px;     font-weight: normal;     padding: 8px;     border: 2px solid $secundario; background: linear-gradient(to top , $terciario 0%, $acento 60%);
+    ; color: $secundario; }
+
+td {  cursor: pointer;   padding-top: 3vh;     background: $principal;    text-align: center;
+    color: $secundario;    border: 2px solid $secundario;}
+caption{
+    color: $secundario;
+}
+tr:hover td { background: rgb(249, 175, 91); color: $secundario; }

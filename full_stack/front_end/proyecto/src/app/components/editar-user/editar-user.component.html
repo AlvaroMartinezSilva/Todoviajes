@@ -1,0 +1,20 @@
+<div class="grid">
+
+  <div class="item1">
+    <ul>
+        <li><a routerLink="/admin" routerLinkActive="activa">Perfil Admin</a></li>
+        <li><a class="nav-link" routerLink="/grafica" routerLinkActive="activa">Gráficas</a></li>
+        <li><a class="active nav-link" routerLink="/users" routerLinkActive="activa">Datos Usuarios</a></li>
+    </ul>
+</div>
+<div class = "item2">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+            <input type="text" id="fname" class="form-control" [(ngModel)]="nombre">
+        </div>
+        <div class="d-grid gap-2 d-md-block" id="seleccionBotones">
+            <button type="submit" class="btn btn-primary active" aria-pressed="true" (click)="btnAceptar(this.nombre)">Aceptar</button>
+            <button type="submit" class="btn btn-primary active" aria-pressed="true"  (click)="btnEliminar()">Eliminar</button>
+        </div>
+</div>
+</div>

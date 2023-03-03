@@ -1,0 +1,92 @@
+@import '_colores.scss';
+
+label{
+    width: 30vh;
+}
+ul {
+    margin: 0; 
+    padding-left: 0vh;
+    background: $secundario;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;    
+    border-color:  $terciario;
+    border-style: solid;
+    border-width: 3px;
+    font-family: $fuente, cursive;
+    border-radius: 1.5vh; 
+    display: inline-block;
+    margin-left: 10vh;    
+    list-style-type: none;
+}
+  
+li a {
+    display: block;
+    color: $acento;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+li a.active {
+    background-color: $secundario;
+    color: $terciario;  
+    border-radius: 1.5vh;   
+}
+  
+li a:hover:not(.active) {
+    background-color: $fugaz;
+    color: $principal;
+    border-radius: 1vh; 
+}
+.grid{
+    display: grid;
+}
+.item1 { 
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+.item2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+    margin-top: 20vh;
+    margin-left: 10vh;
+}
+button[type="submit"] {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+    width: 30vh;
+    background: $terciario;
+    color: $secundario;
+    font-size: 24px;
+    border-radius: 20px;
+    border-color: $secundario;
+
+  }
+  
+button[type="submit"]:hover {
+    cursor: pointer;
+    background: $fugaz;
+    color: $secundario;
+}
+
+#seleccionBotones{
+    padding: 5vh;
+    margin-left: 17vh;
+    font-family: $fuente;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error input[type="text"], .error input[type="password"]{
+    border-width: 1px;
+    border-color: $principal ;
+    background-color: $error;
+    color: $principal;
+  }
+  .login-error{
+    padding: 2vh;
+    color: $principal;
+    text-align: center;
+  }

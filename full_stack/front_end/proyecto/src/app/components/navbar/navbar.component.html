@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+            <img src="/assets/island.png" alt="logo" class="center" height="40" width="40">
+            <h1 class="navbar-brand">To Do Viajes</h1>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <!-- router link-->
+                    <a class="nav-link" aria-current="page" [routerLink]="['']" routerLinkActive="activa"  [routerLinkActiveOptions]="{exact: true}">Página de
+                        inicio</a>
+                </li>
+                <li class="nav-item" *ngIf="usuarioRegistrado()">
+                    <!-- router link-->
+                    <a class="nav-link" [routerLink]="['admin']" routerLinkActive="activa" [routerLinkActiveOptions]="{exact: true}">Admin</a>
+                </li>
+                <li class="nav-item" *ngIf="!usuarioRegistrado()">
+                    <!-- router link-->
+                    <a class="nav-link" [routerLink]="['/login']" routerLinkActive="activa" [routerLinkActiveOptions]="{exact: true}">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="usuarioRegistrado()">
+                    <!-- router link-->
+                    <input class="nav-link" type="button" value="LogOut" (click)="logOut()">
+                </li>
+            
+
+            </ul>
+            <!--</div>-->
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img class="image" src="/assets/hamburger.png" alt=""></label>
+        <div class="container-menu">
+            <div class="cont-menu">
+            <div class="arriba">
+            </div>
+            <div class="menu">
+                <nav>
+                    <a class="nav-link" aria-current="page" [routerLink]="['']" routerLinkActive="activa"  [routerLinkActiveOptions]="{exact: true}">Página de
+                        inicio</a>
+                    <a class="nav-link" [routerLink]="['admin']" routerLinkActive="activa" [routerLinkActiveOptions]="{exact: true}">Admin</a>
+                    <input class="nav-link" type="button" value="LogOut" (click)="logOut()">
+                </nav>
+                <label for="btn-menu">X</label>
+            </div> 
+        </div>
+    </div>

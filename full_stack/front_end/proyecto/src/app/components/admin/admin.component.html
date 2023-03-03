@@ -1,0 +1,28 @@
+
+<div class="grid" >
+    <div class="item1">
+        <ul>
+            <li><a class="active" routerLink="/admin">Perfil Admin</a></li>
+            <li><a class="nav-link" routerLink="/grafica" routerLinkActive="activa">Gráficas</a></li>
+            <li><a class="nav-link" routerLink="/users" routerLinkActive="activa">Datos Usuarios</a></li>
+        </ul>
+    </div>
+    <div class="item2">
+        <h1>Top visitas de la web</h1>
+        <div class="wrapper">
+            <div class="buscados" *ngFor="let item of busqueda; index as i">
+              <p >{{item.id}}</p>
+            </div>
+        </div>
+        <div>
+          <div class="contenedor dropdown">
+            <div class="itemact texto">
+              <p>Seleccionar actualizar </p>
+              <select class="selector" [(ngModel)]="seleccionado" (ngModelChange)="cambio($event)" >
+                <option [value]="item" *ngFor="let item of lista">{{item}} dias</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

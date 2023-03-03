@@ -1,0 +1,85 @@
+@import '_colores.scss';
+label{
+    width: 30vh;
+}
+
+ul {
+    margin: 0; 
+    padding-left: 0vh;
+    background: $secundario;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;    
+    border-color:  $terciario;
+    border-style: solid;
+    border-width: 3px;
+    font-family: $fuente, cursive;
+    border-radius: 1.5vh; 
+    display: inline-block;
+    margin-left: 10vh;    
+    list-style-type: none;
+}
+
+li a {
+    display: block;
+    color: $acento;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: $secundario;
+    color: $terciario; 
+    border-radius: 1.5vh;  
+}
+  
+li a:hover:not(.active) {
+    background-color: $fugaz;
+    color: $principal;
+    border-radius: 1vh; 
+}
+
+.grid{
+    display: grid;
+}
+
+.item1 { 
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.item2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+    margin-top: 20vh;
+    margin-left: 10vh;
+}
+
+#seleccionBotones{
+    font-family: $fuente;
+    font-size: 22px;
+    padding: 1vh;
+    margin-bottom: 5vh;
+}
+
+button[type="submit"] {
+    margin-top: 5vh;
+    margin-left: 3vh;
+    height: 7vh;
+    width: 20vh;
+    background: $terciario;
+    color: $secundario;
+    font-size: 22px;
+    border-radius: 20px;
+    border-color: $secundario;
+}
+  
+button[type="submit"]:hover {
+    cursor: pointer;
+    background: $fugaz;
+    color: $secundario;
+}
+
+label{
+    margin-right: 3vh;
+}

@@ -1,0 +1,40 @@
+
+<div class="grid" >
+
+  <div class="item1">
+      <ul>
+          <li><a routerLink="/admin" routerLinkActive="activa">Perfil Admin</a></li>
+          <li><a class="nav-link" routerLink="/grafica" routerLinkActive="activa">Gráficas</a></li>
+          <li><a class="active nav-link" routerLink="/users" routerLinkActive="activa">Datos Usuarios</a></li>
+      </ul>
+  </div>
+  <div class="item2">
+    <table class="table table-dark">
+      <caption>Haga click en la tabla para editar un perfil de los que ya estan creados</caption>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Tipo Usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of datosU" (click)="editarUsuario(usuario.id)">
+          <td scope="row">{{usuario.id}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.tipoUS}}</td>
+        </tr>
+      </tbody>
+    </table>
+  <button type="submit" class="btn btn-primary" (click)="nuevoUser()">Añadir Usuario</button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+

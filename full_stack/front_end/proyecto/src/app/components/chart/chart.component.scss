@@ -1,0 +1,62 @@
+@import '_colores.scss';
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    background: $secundario;
+    padding-left: 0vh;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;      
+    font-family: 'Brush Script MT', cursive;
+    border-color:  $terciario;
+    border-style: solid;
+    border-width: 3px;
+    display: inline-block;
+    border-radius: 1.5vh; 
+    margin-left: 10vh;
+}
+  
+li a {
+    display: block;
+    color: $acento;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+li a.active {
+    background-color: $secundario;
+    color: $terciario;  
+    border-radius: 1.5vh;  
+}
+  
+li a:hover:not(.active) {
+    background-color: $fugaz;
+    color: $principal;
+    border-radius: 1vh; 
+}
+.chart-container{
+    background-color: $secundario;
+    margin: 10vh;
+    width: 80vh; 
+    height: 40vh;
+}
+.grid{
+    display: grid;
+}
+.item1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+    margin-top: 20vh;
+}
+.item2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+.dropdown{
+    width: 30vh;
+    background: $fugaz;
+    //margin-top: 30vh;
+    padding: 1vh;
+    margin-left: 50vh;
+    margin-bottom: 15vh;
+  
+  }

@@ -1,0 +1,19 @@
+
+<div class="grid" >
+    <div class="item1">
+        <ul>
+            <li><a routerLink="/admin" routerLinkActive="activa">Perfil Admin</a></li>
+            <li><a class="active nav-link" routerLink="/grafica" routerLinkActive="activa">Gráficas</a></li>
+            <li><a class="nav-link" routerLink="/users" routerLinkActive="activa">Datos Usuarios</a></li>        
+        </ul>
+    </div>
+    <div class="item2">
+        <div class="chart-container">
+            <canvas id="my-chart">
+                <div class="chart" *ngFor="let item of datosBusqueda; index as i">
+                    {{datosBusqueda}}
+                </div>
+            </canvas>
+        </div>
+    </div>
+</div>

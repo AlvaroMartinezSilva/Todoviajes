@@ -1,0 +1,23 @@
+<div class="grid">
+  <div class="item1">
+      <ul>
+          <li><a routerLink="/admin" routerLinkActive="activa">Perfil Admin</a></li>
+          <li><a class="nav-link" routerLink="/grafica" routerLinkActive="activa">Gráficas</a></li>
+          <li><a class="active nav-link" routerLink="/users" routerLinkActive="activa">Datos Usuarios</a></li>
+      </ul>
+  </div>
+  <div class = "item2" [ngClass]="{'error':errorMessage}">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
+          <div class="col-sm-10">
+              <input type="text" id="fname" class="form-control" [(ngModel)]="nombre" [ngClass]="{'error':errorMessage}">
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" [(ngModel)]="password" [ngClass]="{'error':errorMessage}">
+          </div>
+          <label class="login-error" *ngIf="errorMessage">Usuario no creado</label>
+        <div class="d-grid gap-2 d-md-block" id="seleccionBotones">
+          <button type="submit" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true" (click)="btnAddUser(this.nombre, this.password)">Añadir Usuario</button>
+      </div>
+  </div> 
+</div>
